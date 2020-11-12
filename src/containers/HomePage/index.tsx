@@ -9,7 +9,10 @@ export default function HomePage({ posts }: HomePageProps) {
   return (
     <Container>
       {posts.map((post) => (
-        <h2 key={post.slug}>{post.title}</h2>
+        <>
+          <img src={post.cover.url} alt="" />
+          <h2 key={post.slug}>{post.title}</h2>
+        </>
       ))}
     </Container>
   )
