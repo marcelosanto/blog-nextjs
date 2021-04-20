@@ -18,7 +18,7 @@ export default function HomePage({ posts }: HomePageProps) {
             <>
               <PostCard
                 key={post.slug}
-                cover={post.cover.formats.small.url}
+                cover={post.cover.formats.small?.url}
                 slug={post.slug}
                 title={post.title}
               />
