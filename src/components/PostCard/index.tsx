@@ -11,7 +11,7 @@ export const PostCard = ({ slug, title, cover }: PostCardProps) => {
   return (
     <Container>
       <PostCardCover>
-        <Link href="/post/[slug]" as={`/post/[slug]`}>
+        <Link href="/post/[slug]" as={`/post/${slug}`}>
           <a>
             <img src={cover} alt={title} />
           </a>
