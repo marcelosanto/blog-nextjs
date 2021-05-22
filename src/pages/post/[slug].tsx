@@ -12,7 +12,7 @@ const DynamicPost = ({ post }: DynamicPostProps) => {
   return (
     <>
       <p>{post.title}</p>
-      <p>{post.content}</p>
+      <p dangerouslySetInnerHTML={{ __html: post.content }} />
     </>
   )
 }
