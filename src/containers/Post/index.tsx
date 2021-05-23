@@ -6,6 +6,7 @@ import { Footer } from '../../components/Footer'
 import { Heading } from '../../components/Heading'
 import { PostCover } from '../../components/PostCover'
 import { PostDetails } from '../../components/PostDetails'
+import { PostContainer } from '../../components/PostContainer'
 
 export type PostProps = {
   post: PostData
@@ -25,7 +26,7 @@ export const Post = ({ post }: PostProps) => {
           date={post.created_at}
         />
 
-        <div dangerouslySetInnerHTML={{ __html: post.content }} />
+        <PostContainer content={post.content} />
       </MainContainer>
 
       <Footer />
