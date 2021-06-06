@@ -5,10 +5,11 @@ import HomePage from '../../containers/HomePage'
 
 export type CategoryProps = {
   posts: PostData[]
+  category: string
 }
 
-export default function Category({ posts }: CategoryProps) {
-  return <HomePage posts={posts} />
+export default function Category({ posts, category }: CategoryProps) {
+  return <HomePage posts={posts} category={category} />
 }
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
@@ -17,6 +18,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   )
 
   return {
-    props: { posts },
+    props: { posts, category: ctx.query.category },
   }
 }

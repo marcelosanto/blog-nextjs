@@ -9,9 +9,10 @@ import { SITE_NAME } from '../../config/app-config'
 
 export type HomePageProps = {
   posts: PostData[]
+  category?: string
 }
 
-export default function HomePage({ posts }: HomePageProps) {
+export default function HomePage({ posts, category }: HomePageProps) {
   return (
     <>
       <Head>
@@ -19,6 +20,7 @@ export default function HomePage({ posts }: HomePageProps) {
         <meta name="description" content="Este é o meu blog de tecnologia." />
       </Head>
       <Header />
+      {category && <div>Categoria: {category}</div>}
       <MainContainer>
         <Container>
           {posts.map((post) => (
