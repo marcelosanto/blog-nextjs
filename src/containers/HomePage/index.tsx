@@ -4,7 +4,7 @@ import { Header } from '../../components/Header'
 import { MainContainer } from '../../components/MainContainer'
 import { PostCard } from '../../components/PostCard'
 import { PostData } from '../../domain/posts/post'
-import { Container } from './style'
+import { Category, Container } from './style'
 import { SITE_NAME } from '../../config/app-config'
 
 export type HomePageProps = {
@@ -20,7 +20,7 @@ export default function HomePage({ posts, category }: HomePageProps) {
         <meta name="description" content="Este é o meu blog de tecnologia." />
       </Head>
       <Header />
-      {category && <div>Categoria: {category}</div>}
+      {category && <Category>Categoria: {category}</Category>}
       <MainContainer>
         <Container>
           {posts.map((post) => (
